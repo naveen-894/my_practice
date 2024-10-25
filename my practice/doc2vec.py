@@ -1,6 +1,6 @@
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 import pandas as pd
-import numpy as np
+import numpy_practice as np
 
 # Define job and candidate skills
 job_skills = ['frontend development', 'javascript', 'node js']

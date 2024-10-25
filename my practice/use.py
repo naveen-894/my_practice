@@ -1,6 +1,6 @@
 import tensorflow as tf
 import tensorflow_hub as hub
-import numpy as np
+import numpy_practice as np
 import pandas as pd
 
 # Load the Universal Sentence Encoder

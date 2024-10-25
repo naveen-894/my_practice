@@ -1,4 +1,4 @@
-import numpy as np
+import numpy_practice as np
 
 def vectorize_skills(skills_list, all_skills):
     # Create a vector of length equal to the number of unique skills
