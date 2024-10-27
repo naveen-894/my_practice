@@ -79,3 +79,53 @@ my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 print(my_list[::-2])
 
+# Iterator Example
+class MyIterator:
+    def __init__(self, limit):
+        self.limit = limit
+        self.count = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.count < self.limit:
+            result = self.count
+            self.count += 1
+            return result
+        else:
+            self.count = 0
+            raise StopIteration
+
+it = MyIterator(5)
+
+# Generator Example
+def my_generator(limit):
+    count = 0
+    while count < limit:
+        yield count
+        count += 1
+
+gen = my_generator(5)
+print(type(gen))
+
+for x in gen:
+    print(x)
+print('**'*6)
+for x in gen:
+    print(x)
+
+# for x in it:
+#     print(x)
+# print('**'*6)
+# for x in it:
+#     print(x)
+
+def h(name: str = 'naveen') -> None:
+    """Prints the provided name, defaulting to 'naveen' if none is given."""
+    print(name)
+def h1(name):
+    print(name)
+
+h(9)
+h1('alhiho')

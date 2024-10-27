@@ -195,3 +195,38 @@ print(arr1)
 arr1 + arr2
 
 print(arr1 + arr2)
+
+"""
+Aggregation and Descriptive Statistics
+Calculate Statistics: Create a 6x6 matrix with random values between 1 and 50. Calculate the minimum, maximum, and mean of each column.
+Standard Deviation Filtering: Generate an array of 30 random values. Filter and print only the elements that are more than one standard deviation away from the mean.
+"""
+arr = np.random.randint(1,50, (6,6))
+print(arr.min())
+print(arr.max())
+print(arr.mean())
+
+arr = np.random.randint(1, 30, 30)
+filter_arr = []
+mean = arr.mean()
+std = arr.std()
+# for x in np.nditer(arr):
+#   filter_arr.append(bool( x - mean > std))
+print(arr[np.abs(arr - mean)>std])
+# print(arr[filter_arr])
+print(arr)
+
+"""
+Linear Algebra
+Dot Product: Create two 1D arrays of size 5, both with values from 1 to 5. Compute the dot product of these arrays.
+Matrix Multiplication: Generate two 3x3 matrices with values from 1 to 9. Perform matrix multiplication on them.
+"""
+
+arr = np.arange(1,6)
+arr1 = np.arange(1,6)
+print(arr*arr1)
+
+arr = np.random.randint(1,9, (3,3))
+arr1 = np.random.randint(1,9, (3,3))
+
+print(arr*arr1)
